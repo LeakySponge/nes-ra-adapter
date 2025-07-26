@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NES RA Adapter</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    background-image: url('https://i.imgur.com/QF1u81y.png');
+
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial Black', sans-serif;
+      background-color: #ece7d9;
+      color: #000;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      font-weight: bold;
+      font-size: 60px;
+      font-family: 'Fugaz-One', sans-serif;
+    }
+
+    .achievement-banner {
+      position: absolute;
+    top: 35px;
+    left: 4%;
+    transform: translateY(-50%);
+    background-color: #2b2b2b;
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    line-height: 50px;
+    }
+
+    .achievement-banner img {
+      height: 30px;
+    }
+
+    .main-box {
+      flex: 1;
+      background-color: #ff006e;
+      padding: 20px;
+      top: -23px;
+      margin: 30px;
+      width: 1818px;
+      line-height: 458px;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      position: relative;   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .main-box h1 {
+      font-size: 80px;
+      margin: 0;
+      color: #fefefe;
+      text-shadow: 3px 3px #00000022;
+    }
+
+    .main-box .subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .unlock-rate {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      color: #ff006e;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      line-height: 50px;
+    }
+
+    .game-section {
+      display: flex;
+      flex: 1;
+      margin: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .current-game {
+      background-color: #d34a7c;
+      border-radius: 10px;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      flex: 1;
+      min-width: 250px;
+      resize: both;
+      overflow: auto;
+    }
+
+    .current-game img {
+      width: 100px;
+      object-fit: cover;
+    }
+
+    .game-info {
+      background-color: #1e1e1e;
+      color: #ccc;
+      padding: 10px;
+      font-size: 0.8em;
+      flex: 1;
+    }
+
+    .game-info .title {
+      font-size: 1.2em;
+      color: #ff2964;
+    }
+
+    .label-box {
+      background-color: #8659cb;
+      color: white;
+      padding: 2px 8px;
+      display: inline-block;
+      font-size: 0.7em;
+      border-radius: 3px;
+      margin-bottom: 5px;
+    }
+
+    .progress-section {
+      flex: 1;
+      min-width: 200px;
+      resize: both;
+      overflow: auto;
+    }
+
+    .progress-title {
+      font-weight: bold;
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+
+    .progress-fill {
+      width: 10%;
+      height: 100%;
+      background-color: #ff006e;
+      border-radius: 8px 0 0 8px;
+    }
+
+    .challenges {
+      margin: 20px;
+    }
+
+    .challenges h2 {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .challenge-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .challenge-icons img {
+      width: 50px;
+      height: 50px;
+      image-rendering: pixelated;
+    }
+    .fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <div>NES RA ADAPTER</div>
+    <div>📶 13:02</div>
+  </div>
+
+ 
+
+  <main>
+    <div class="main-box">
+      <div class="unlock-rate">98.63% UNLOCK RATE</div>
+      <h1>SHROOMS...</h1>
+       <div class="achievement-banner">
+    <img src="https://i.imgur.com/0Q9ZVl4.png" alt="Mario Achievement Icon" />
+    You Got An Achievement!!
+  </div>
+    </div>
+
+    <div class="game-section">
+      <div class="current-game">
+        <img src="https://i.imgur.com/B9Q6fRp.png" alt="Super Mario Sprite" />
+        <div class="game-info">
+          <div class="label-box">CURRENT GAME</div>
+          <div class="title">Super Mario Bros</div>
+          <div>Nintendo</div>
+          <div>1 of 77 Achievements</div>
+          <div>Unfinished</div>
+          <div>54 (83) hardcore points</div>
+        </div>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-title">CURRENT GAME PROGRESS</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="challenges">
+      <h2>ACTIVE CHALLENGES</h2>
+      <div class="challenge-icons">
+        <img src="https://i.imgur.com/Xqz5HDw.png" alt="Challenge Icon 1" />
+        <img src="https://i.imgur.com/VkEQ4aO.png" alt="Challenge Icon 2" />
+      </div>
+    </div>
+  </main>
+</body>
+</html>

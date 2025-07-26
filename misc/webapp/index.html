@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #ece037;
+            background-color: #212121;
             font-family: sans-serif;
         }
 
@@ -124,8 +124,7 @@
 
         .disconnected {
             color: white;
-            background-color: #FF4C4C;
-        }
+            background-color: #FF4C4C;        }
 
         .hidden {
             display: none !important;
@@ -208,6 +207,7 @@
             animation: fadeInOut 4s ease-in-out forwards;
         }
 
+
         @keyframes fadeInOut {
             0% {
                 opacity: 0;
@@ -239,6 +239,7 @@
         let user_token = null;
         let game_session = null;
         let game_id = null;
+        let user_pic = null;
 
         function send_notification(title, body, icon) {
             // do not work without https and websocket cannot be wss on esp32
