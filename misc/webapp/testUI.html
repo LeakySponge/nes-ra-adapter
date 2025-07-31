@@ -9,7 +9,6 @@
       height: 100%;
       margin: 0;
       padding: 0;
-    background-image: url('https://i.imgur.com/QF1u81y.png');
 
     }
 
@@ -73,14 +72,20 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      border-style: solid;
+      border-width: 5px;
+      border-color: #000000;
+      outline: 10px solid #e5e3cf;
+      outline-offset: -1px;
     }
 
     .main-box h1 {
-      font-size: 80px;
+      font-size: 300px;
       margin: 0;
-      color: #fefefe;
+      color: #e5e3cf;
       text-shadow: 3px 3px #00000022;
-    }
+        }
 
     .main-box .subtitle {
       font-size: 14px;
@@ -104,25 +109,28 @@
     .game-section {
       display: flex;
       flex: 1;
-      margin: 20px;
-      gap: 20px;
+      transform: translateX(3.5%);
+      margin: -17px;
+      gap: 50px;
+      width: 93.5%;
       flex-wrap: wrap;
+      line-height: 300z%;
     }
 
     .current-game {
       background-color: #d34a7c;
       border-radius: 10px;
+      
       display: flex;
       align-items: stretch;
       overflow: hidden;
       flex: 1;
       min-width: 250px;
-      resize: both;
       overflow: auto;
     }
 
     .current-game img {
-      width: 100px;
+      width: 400px;
       object-fit: cover;
     }
 
@@ -152,33 +160,43 @@
     .progress-section {
       flex: 1;
       min-width: 200px;
-      resize: both;
-      overflow: auto;
     }
 
     .progress-title {
       font-weight: bold;
-      font-size: 1em;
-      margin-bottom: 5px;
+      font-size: 200%;
+      margin-bottom: 0px;
     }
 
     .progress-bar {
       width: 100%;
-      height: 10px;
+      height: 36px;
       background-color: white;
-      border: 2px solid black;
-      border-radius: 10px;
+      border: 7px solid black;
+      border-radius: 50px;
+      transform: translate(35px, -7px);
+
     }
 
     .progress-fill {
       width: 10%;
       height: 100%;
       background-color: #ff006e;
-      border-radius: 8px 0 0 8px;
+      border-radius: 50px;
     }
 
     .challenges {
-      margin: 20px;
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 200px;
+      resize: both;
+      overflow: auto;
+      height: fit-content;
+      line-height: 140px;
+      transform: translate(40px,20px);
     }
 
     .challenges h2 {
@@ -217,6 +235,7 @@
  
 
   <main>
+    
     <div class="main-box">
       <div class="unlock-rate">98.63% UNLOCK RATE</div>
       <h1>SHROOMS...</h1>
@@ -224,6 +243,7 @@
     <img src="https://i.imgur.com/0Q9ZVl4.png" alt="Mario Achievement Icon" />
     You Got An Achievement!!
   </div>
+  
     </div>
 
     <div class="game-section">
@@ -237,6 +257,7 @@
           <div>Unfinished</div>
           <div>54 (83) hardcore points</div>
         </div>
+        
       </div>
 
       <div class="progress-section">
@@ -244,15 +265,16 @@
         <div class="progress-bar">
           <div class="progress-fill"></div>
         </div>
-      </div>
-    </div>
-
-    <div class="challenges">
+        <div class="challenges">
       <h2>ACTIVE CHALLENGES</h2>
       <div class="challenge-icons">
         <img src="https://i.imgur.com/Xqz5HDw.png" alt="Challenge Icon 1" />
         <img src="https://i.imgur.com/VkEQ4aO.png" alt="Challenge Icon 2" />
       </div>
+      </div>
+    </div>
+
+    
     </div>
   </main>
 </body>
